@@ -1,7 +1,44 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>HoME pAGe</title>
+	<link rel="stylesheet" href="leaflet-1.0.3/leaflet.css"/>
+	<script src="leaflet-1.0.3/leaflet.js"></script>
+	<style>
+   		 #map{ width: 600px; height: 400px; }
+	</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+	<h1>Hello Worlds</h1>
+	<p> places I've lived </p>
+	
+	<div id="map"></div>
+
+	<script>
+		// initialize the map
+ 		var map = L.map('map').setView([39.8, -98.57], 4);
+
+		// load a tile layer
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		    maxZoom: 18,
+		    id: 'mapbox.streets',
+        	accessToken: 'pk.eyJ1IjoibWF0dC1idXRuZXIiLCJhIjoiY2o0YWYyNmk2MTNldjJxcDJna3hqZ3RhZCJ9.DoUWNODgtXEwYbMdB1fETQ'
+		}).addTo(map);
+
+		
+// making cities
+		var boulder = L.marker([40.0150, -105.2705]).bindPopup('Boulder, CO'),
+		    nola    = L.marker([29.9511, -90.0715]).bindPopup('New Orleans, LA'),
+		    tampa    = L.marker([27.9506, -82.4572]).bindPopup('Tampa, FL');
+
+		var cities = L.layerGroup([boulder,nola,tampa]).addTo(map);
+		
+
+	</script>
+
+
+
 </body>
 </html>
