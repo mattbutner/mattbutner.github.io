@@ -1,7 +1,41 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>A Leaflet map!</title>
+	<link crossorigin='' href='https://unpkg.com/leaflet@1.0.3/dist/leaflet.css' integrity='sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==' rel='stylesheet'/>
+	<script crossorigin='' integrity='sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==' src='https://unpkg.com/leaflet@1.0.3/dist/leaflet.js'/>
+	<script src='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.js'/>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.38.0/mapbox-gl.css' rel='stylesheet'/>
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  
+
+	<h1>Hello World</h1>
+
+	<p>I'm hosted with GitHub Pages.</p>
+
+	<p>Here I am trying to make a map of Boulder, CO</p>
+
+	<style type="text/css">
+    #mapid {
+        width: 500px; 
+        height: 400px; 
+    }
+	</style>
+
+	<div id="mapid"></div>
+
+	<script type="text/javascript">
+   		var mymap = L.map('mapid').setView([40.505, -105], 5);
+    
+	    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+	        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+	        maxZoom: 18,
+	        id: 'mapbox.satellite',
+	        accessToken: 'pk.eyJ1IjoibWF0dC1idXRuZXIiLCJhIjoiY2o0YWYyNmk2MTNldjJxcDJna3hqZ3RhZCJ9.DoUWNODgtXEwYbMdB1fETQ'
+	    }).addTo(mymap);
+
+	</script>
 </body>
 </html>
