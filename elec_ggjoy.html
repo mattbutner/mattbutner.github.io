@@ -134,7 +134,7 @@ $(document).ready(function () {
 <p>I will use ggjoy to look at the hourly wind generation and electricity prices within the Midcontinent Independent System Operator wholesale electricity market in the year 2014.</p>
 <div id="by-month-of-year" class="section level2">
 <h2>by month of year</h2>
-<p>Here I show the density of wind generation and electricity price for the (roughly) three hundred and sixty observations for each month.</p>
+<p>Here I show the density of wind generation and electricity price for the (roughly) seven hundred and twenty observations for each month.</p>
 <pre class="r"><code>hr_wind_2014 &lt;- read_csv(&quot;data/miso/wind_gen/2014_clean.csv&quot;)
 hr_wind_2014$month &lt;- as.numeric(do.call(rbind,strsplit(hr_wind_2014$mkt_day,&quot;/&quot;))[,1])
 hr_wind_2014$month_mean &lt;- ave(hr_wind_2014$MWh, as.factor(hr_wind_2014$month))
