@@ -1,3 +1,24 @@
-theme: jekyll-theme-minimal
-title: Matt Butner
-description: Economics and Maps
+theme:            jekyll-theme-minimal
+title:            Matt Butner
+tagline:          "Matt Butner"
+description:      'Economics and Maps'
+url:              https://mattbutner.github.io
+baseurl:          'https://mattbutner.github.io'
+# Dependencies
+
+
+# Permalinks
+permalink:        /:categories/:year/:month/:day/:title/
+
+  
+paginate:         5
+
+# Custom vars
+version:          0.1.0
+
+github:
+  repo:          https://github.com/mattbutner
+  
+excerpt_separator: <!--endexcerpt-->
+
+gems: [jekyll-paginate]
