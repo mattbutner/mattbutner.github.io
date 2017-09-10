@@ -2,45 +2,49 @@
 <html>
 <head>
 	<title>Matthew Ridge Butner</title>
+	<link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
 	<link rel="stylesheet" href="leaflet-1.0.3/leaflet.css"/>
 	<script src="leaflet-1.0.3/leaflet.js"></script>
-	<style>
-   		 #map{ width: 600px; height: 400px; }
-	</style>
+	<style> #map{ width: 600px; height: 400px; }</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </head>
 <body>
+	<div class="wrapper">
+		<header>
+			<h1>Matt Butner</h1>
+			<p>An empirical economist thinking about energy and the environment. </p>
+			<p>matt[dot]butner[at]gmail[dot]com</p>
+			<h3><p class="view"><a href="https://mattbutner.github.io/">Home</a></p></h3>
+			<h3><p class="view"><a href="cv.pdf">Curriculum Vitae</a></p></h3>
+			<h3><p class="view"><a href="teaching.html">Teaching</a></p></h3>
+			<h3><p class="view"><a href="data_explorations.html">Data explorations</a></p></h3> 
+			<p class="view"><img src="images/flatiron_c.png" width="250" height="250"></p>
+		</header>
+		<section>
+			<p>PhD candidate at the University of Colorado Boulder. </p>
 
-	<h1>Matthew Ridge Butner</h1>
-	<p> Hi, welcome to my corner of the internet. This Github page is used to host maps and charts I make.</p> 
-	<p> Feel free to check out <a href="https://sites.google.com/site/matthewridgebutner/">my personal homepage</a></p>
+			<h2>Current Projects</h2>
 
-	<p> Here is a simple map showing the places I've lived using leaflet.js</p>
-	<div id="map"></div>
-
-	<script>
-		// initialize the map
- 		var map = L.map('map').setView([39.8, -98.57], 4);
-
-		// load a tile layer
-		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-		    maxZoom: 18,
-		    id: 'mapbox.streets',
-        	accessToken: 'pk.eyJ1IjoibWF0dC1idXRuZXIiLCJhIjoiY2o0YWYyNmk2MTNldjJxcDJna3hqZ3RhZCJ9.DoUWNODgtXEwYbMdB1fETQ'
-		}).addTo(map);
-
-		
-// making cities
-		var boulder = L.marker([40.0150, -105.2705]).bindPopup('Boulder, CO'),
-		    nola    = L.marker([29.9511, -90.0715]).bindPopup('New Orleans, LA'),
-		    tampa    = L.marker([27.9506, -82.4572]).bindPopup('Tampa, FL');
-
-		var cities = L.layerGroup([boulder,nola,tampa]).addTo(map);
-		
-
-	</script>
+			<!--Look into collapse bootstrap js --> 
+			<h4>Pass-through of increased renewable generation in wholesale electricity markets </h4>
+			<p>Renewable generation has become a significant portion of the American electrical grid as the associated costs have declined, the technological efficiency has improved, and public policies have supported investment and production. The extent to which increased renewable generation is realized as a reduction in fuel costs by the generators of electricity, or is translated into a reduction in the market price payed by consumers, has implications for investment decision and effective policy design.  In this paper, I use rich micro-data on generator strategies in wholesale electricity markets within the US Midcontinent Independent System Operator, from 2014 to 2016, to quantify the pass-through rate of increased renewable generation onto market price. Results indicate the pass-through rate of increased wind generation depends on the slope of the residual demand curve as well as the ownership of the generation assets, as legacy fossil fuel generators can curtail their generation offer to keep the market price high.  </p>
 
 
+			<h4>Concentration effects of heterogeneous standards: refinery response to the clean air act amendments </h4>
+			<p>Sometimes environmental regulations will alter the geographic and product markets in which firms compete. This can impact the firm’s ability to exercise market power, and profits subsequently. The boutique fuel standards related to the 1990 Clean Air Act Amendments did exactly this to the petroleum refining industry by mandating unconventional, cleaner burning, fuels to be used in certain counties of the United States. While the production of the cleaner fuel increased the fixed and variable cost of refineries, it also allowed them to recuperate lost profits by selling their product in a more concentrated market with a higher markup. Using a latent profit approach, I show evidence the change in profitability offset investment cost in contrast to industry claims. I then construct and simulate a model of spatial Cournot competition, where the refineries behave as multiproduct firms with capacity constraints. This supports the observed pattern of investment and exit.</p>
 
+			<h4>Incentives for private public bundling as a provision for public goods</h4>
+			<p>A common form of corporate social responsibility is to sell a private good to a consumer that is bundled with a public good or a donation towards a public good. This changes the consumers purchasing decisions and can either increase or decrease the total welfare depending on the structure of the bundle and consumer preferences. At the same time, firms are endogenously choosing the bundling structure in a way that is privately profitable. I consider how the profit maximizing bundle choice by the firm compares to a bundle choice that maximizes total welfare, and what sort of incentives or policy mechanisms can lead to a welfare maximizing bundle. Further, to what extent does bundling, for welfare or profit maximization, approximate the first best provision of the public good as chosen by a social planner. </p>
+		</section>
+<!--		<footer>
+			<p>This project is maintained by <a href="http://github.com/orderedlist">Steve Smith</a></p>
+			<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+		</footer> -->
+	</div>
+    <script src="javascripts/scale.fix.js"></script>
 </body>
 </html>
