@@ -1,0 +1,87 @@
+---
+title: "Electricity data with ggjoy"
+author: "Matthew Butner"
+date: "July 25, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = 'D:\\Projects\\renewable_market\\')
+library(ggplot2)
+library(dplyr)
+library(ggjoy)
+library(readr)
+
+```
+
+# ggjoy
+
+ggjoy is a new package in R that visulizes stacked densitites. The package name comes from [Joy Division's Unknown Pleasures album cover art](https://en.wikipedia.org/wiki/Unknown_Pleasures).
+
+It integrates perfectly with the widely used visualization package for R, ggplot2, with the addition of the geom_joy() function.
+
+# Electricity data
+
+I will use ggjoy to look at the hourly wind generation and electricity prices within the Midcontinent Independent System Operator wholesale electricity market in the year 2014.  
+
+## by month of year
+Here I show the density of wind generation and electricity price for the (roughly) seven hundred and twenty observations for each month. 
+
+```{r, warning=FALSE,error=FALSE, message=FALSE}
+hr_wind_2014 <- read_csv("data/miso/wind_gen/2014_clean.csv")
+hr_wind_2014$month <- as.numeric(do.call(rbind,strsplit(hr_wind_2014$mkt_day,"/"))[,1])
+hr_wind_2014$month_mean <- ave(hr_wind_2014$MWh, as.factor(hr_wind_2014$month))
+
+ggplot(hr_wind_2014[order(hr_wind_2014$month),], aes(x=MWh, y=as.factor(month), fill=month_mean))+
+  geom_joy2()+ theme_joy(grid = FALSE) +
+  scale_x_continuous(expand = c(0.01, 0)) +
+  scale_y_discrete(expand = c(0.01, 0))+
+  labs(x="MWh wind generation in one hour", y="Month of year")+ guides(fill="none")
+```
+
+Seems like there wasn't much wind generation in the late summer.
+
+```{r, warning=FALSE,error=FALSE, message=FALSE}
+hr_price_2014 <- read_csv("data/miso/da_lmp/2014_da_lmp_long.csv")
+hr_price_2014$month <- as.numeric(substr(as.character(hr_price_2014$date),5,6))
+hr_price_2014$month_mean <- ave(hr_price_2014$lmp, as.factor(hr_price_2014$month))
+
+ggplot(hr_price_2014, aes(x=lmp, y=as.factor(month), fill=month_mean))+geom_joy2(col = "grey70",  scale = 2.5)+ theme_joy(grid = FALSE) +
+  scale_x_continuous(expand = c(0.01, 0), limits=c(10,70)) +
+  scale_y_discrete(expand = c(0.01, 0)) +
+  labs(x="Hourly Average Electricity Price, $/MWh", y="Month of year")+guides(fill="none")
+```
+
+Electricity prices are declining over time? 
+
+# by hour of day
+
+I can also look at intra-daily trends. This can say something about real time electricity pricing and renewable generation. 
+
+```{r, warning=FALSE,error=FALSE, message=FALSE}
+hr_wind_2014 <- read_csv("data/miso/wind_gen/2014_clean.csv")
+hr_wind_2014$hour_mean <- ave(hr_wind_2014$MWh, as.factor(hr_wind_2014$hour_end))
+hr_wind_2014 <- hr_wind_2014[order(hr_wind_2014$hour_end),]
+
+ggplot(hr_wind_2014, aes(x=MWh, y=as.factor(hour_end), fill=hour_mean, height=..density..))+
+  geom_joy2(scale=2.5)+ theme_joy(grid = FALSE) +
+  scale_x_continuous(expand = c(0.01, 0)) +
+  scale_y_discrete(expand = c(0.01, 0))+
+  labs(x="MWh wind generation in one hour", y="Hour of Day")+ guides(fill="none")
+```
+
+It looks like the 365 observations per hour have the same density across hours. 
+
+```{r, warning=FALSE,error=FALSE, message=FALSE}
+hr_price_2014 <- read_csv("data/miso/da_lmp/2014_da_lmp_long.csv")
+hr_price_2014$hour_mean <- ave(hr_price_2014$lmp, as.factor(hr_price_2014$hour))
+hr_price_2014 <- hr_price_2014[order(-hr_price_2014$hour),]
+ggplot(hr_price_2014, aes(x=lmp, y=as.factor(hour), fill=hour_mean))+geom_joy2(col = "grey70",  scale = 2.5)+ theme_joy(grid = FALSE) +
+  scale_x_continuous(expand = c(0.01, 0), limits=c(10,60)) +
+  scale_y_discrete(expand = c(0.01, 0)) +
+  labs(x="Electricity Price, $/MWh", y="Hour of day")+guides(fill="none")
+```
+
+As expected, there are clear trends in electricity price within a day. This reflects patterns in demand for electricity. 
+
