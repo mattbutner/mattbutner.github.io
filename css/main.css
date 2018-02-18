@@ -34,27 +34,28 @@ ul.posts li {
     list-style: none;
 }
 
-#wrap {
-   width:600px;
-   margin:0 auto;
-}
-#left_col {
-   float:left;
-   width:300px;
-}
-#right_col {
-   float:right;
-   width:300px;
-}
 
-.column {
+.left {
     float: left;
     width: 50%;
 }
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
+.right {
+    float: right;
+    width: 50%;
+}
+.group:after {
+    content:"";
     display: table;
     clear: both;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media screen and (max-width: 480px) {
+    .left, 
+    .right {
+        float: none;
+        width: auto;
+    }
 }
