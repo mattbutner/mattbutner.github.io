@@ -55,10 +55,7 @@ img {
     height: auto;
 }
 @media screen and (max-width: 640px) {
-    .left{
-        float: none;
-        width: auto;
-    },
+    .left,
     .right {
         float: none;
         width: auto;
