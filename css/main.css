@@ -40,6 +40,7 @@ ul.posts li {
     width: 50%;
 }
 .right {
+    padding-left: 25px;
     float: right;
     width: 50%;
 }
@@ -49,6 +50,8 @@ ul.posts li {
     clear: both;
 }
 img {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
     height: auto;
 }
