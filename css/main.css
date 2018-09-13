@@ -34,13 +34,12 @@ ul.posts li {
     list-style: none;
 }
 
-
 .left {
     float: left;
     width: 50%;
 }
 .right {
-    padding-left: 25px;
+    padding-left: 100px;
     float: right;
     width: 50%;
 }
