@@ -54,10 +54,13 @@ img {
     height: auto;
 }
 @media screen and (max-width: 640px) {
-    .left,
+    .left {
+        padding: 5px 0px;
+      },
     .right {
         float: none;
         width: auto;
+        padding: 5px 0px;
     }
 }
 * {
