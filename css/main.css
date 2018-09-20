@@ -54,14 +54,11 @@ img {
     height: auto;
 }
 @media screen and (max-width: 640px) {
-    .left {
-        padding: 5px 0px;
-      },
+    .left,
     .right {
         float: none;
         width: auto;
-        padding: 5px 0px;
-    }
+  }
 }
 * {
   box-sizing: border-box;
