@@ -1,2 +1,4 @@
 name: Matt Butner
 markdown: kramdown
+
+theme: jekyll-theme-minimal
