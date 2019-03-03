@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Research
-cover: cover_top_300pixels_tall.jpg
+cover: cover_top_300pixels_tall.JPG
 date:   2019-03-03 12:00:00
 ---
 
