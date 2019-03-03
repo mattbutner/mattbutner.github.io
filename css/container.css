@@ -1,0 +1,27 @@
+/*****************************************************************************/
+/*
+/* Collapsible
+/*
+/*****************************************************************************/
+
+.container {
+    background-color: #008CBA; /* Green */
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 2px;
+
+}
+.container div {
+    padding: 2px 2px;
+}
+.container .header {
+    padding: 2px;
+    cursor: pointer;
+}
+.container .content {
+    background-color:#ffffff;
+    color: black;
+    display: none;
+}

@@ -1,4 +1,3 @@
-name: Matt Butner
-markdown: kramdown
-
-theme: jekyll-theme-minimal
+name: Flex
+markdown: redcarpet
+pygments: true

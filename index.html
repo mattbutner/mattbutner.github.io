@@ -3,13 +3,7 @@ layout: default
 title: Matthew Ridge Butner
 ---
 
-<div class="group">
-    <div class="left">
-		    <img src="images/matt_butner_scaled.jpg" alt="Portrait"  width="800"  >
-    </div>
-    <div class="right">
-        <p>I am an economist researching environmental economics and industrial organization at the University of Colorado Boulder. </p>
-        <p>My job market paper,  <a href="research/butner_jmp.pdf">Gone with the Wind: Consumer Surplus from Renewable Generation</a>, uses micro-data from a large wholesale electricity market in the United States to quantify the consumer benefit from renewable generation, in particular wind turbines. I find that the potential consumer benefit is quite large, 50 to 60 USD per person per year. However, less than 70% of this benefit is realized because some electricity generators have an incentive to behave less competitively when wind turbines are generating electricity. <br>
-         </p>
-    </div>
-</div>
+
+{% assign page = site.posts.first %}
+{% assign content = page.content %}
+{% include post.html %}
