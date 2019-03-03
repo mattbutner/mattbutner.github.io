@@ -2,6 +2,7 @@
 layout: post
 title: Teaching
 cover: cover_top_300pixels_tall.jpg
+date:   2019-03-03 12:00:00
 ---
 
 ## Instructor of Record, University of Colorado Boulder:
