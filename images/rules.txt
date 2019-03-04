@@ -1,0 +1,2 @@
+1. reduce image height to 2000 pixels using resize
+2. scale image (fixed proportions) so height is 300 pixels
