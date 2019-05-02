@@ -5,11 +5,11 @@
 /*****************************************************************************/
 
 .container {
-    background-color: #88a8d7; /* Green */
+/*    background-color: #88a8d7;
     border: none;
     color: white;
     text-decoration: none;
-    display: inline-block;
+    display: inline-block;*/
     padding: 2px 2px;
 
 }
@@ -21,7 +21,7 @@
     cursor: pointer;
 }
 .container .content {
-    background-color:#ffffff;
-    color: black;
+/*    background-color:#ffffff;
+    color: black; */
     display: none;
 }
