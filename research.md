@@ -28,8 +28,3 @@ When implementing a Pigouvian tax to address an externality, a principle is that
 - Environmental policies that create new product markets can make manufacturers more profitable.
 - <div class="container"> <div class="header"><span>Abstract</span> </div> <div class="content">
   Environmental regulations can alter the geographic and product markets in which firms compete. This impacts a firm's ability to exercise market power, and profits subsequently. This ability to charge a higher markup-over-cost can counteract the increase in the cost of production associated with the environmental regulation. In the context of the Boutique Fuel Standards resulting from the 1990 Clean Air Act Amendments, I use a latent profit approach to show how refineries that were more exposed to the environmental regulation were less likely to exit the market. This is consistent with a model of spatial Cournot competition in which firms can invest in a technology that allows them to charge a higher mark up. </div></div>
-
-
-## Works in Progress
-- Incentives for Private-Public Bundling and the Provision of Public Goods
-- Market Risk and Investment Incentives
