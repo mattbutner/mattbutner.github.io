@@ -4,6 +4,7 @@ title: Teaching
 cover: thousandislands.JPG
 date:   2019-03-03 12:00:00
 ---
+[Here's what some students have said about me.](/filecabinet/Student Comments.pdf)
 
 ## Instructor of Record, University of Colorado Boulder:
 * Intermediate Microeconomic Theory, Econ 3070
