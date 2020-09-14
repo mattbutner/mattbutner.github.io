@@ -8,7 +8,7 @@ date:   2019-03-03 12:00:00
 
 ## Reports
 
-### [An Energy Imbalance Market in the Southeastern United States](/filecabinet/Southeast_EIM_Report_ETI_Sept2020.pdf)
+### [An Energy Imbalance Market in the Southeastern United States](/policy/Southeast_EIM_Report_ETI_Sept2020.pdf)
 
 ### [Making the Most of Distributed Energy Resources: Subregional Estimates of the Environmental Value of Distributed Energy Resources in the United States](/policy/Making_the_Most_of_Distributed_Energy_Resources.pdf)
 
