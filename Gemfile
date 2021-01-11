@@ -4,4 +4,4 @@ gem "github-pages", group: :jekyll_plugins
 
 gem "jekyll", "~> 3.7"
 
-gem "redcarpet", "~> 3.4"
+gem "redcarpet", "~> 3.5"
